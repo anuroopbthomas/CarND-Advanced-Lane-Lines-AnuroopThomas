@@ -188,7 +188,11 @@ Here's a [link to my video result](./project_video_output.mp4)
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-I implement a lane finding algorithm in this project, it performs well on the project video, but not well on the challenge video and fails on the hard challenge video. There are many points need to be improved further, but I have no time for this course, have to move into the next step. I hope I could improve it further in the future.
+One of the problems I face while constructing this pipeline was being able to get an effective gradient image. I had to play around and find out which image would be the best for the pipeline. The other issues I faced were me just typing a lot of code and making silly syntax errors or import errors. Other than that, I didn't face anything bad and I'm glad that it now works sufficiently.
+
+The pipeline will likely fail in a more complicated road video feed where there is lot of noise or the road doesn't match a parallel scheme. For example, my pipeline fails on the hard challenge video and doesn't perform that well on the challenge video. I hope I could improve these failures on the pipeline in the future. 
 
 - The lane detecting algorithm is not robust enough for noise, such as shadow and blur lane lines, especially for the trees in the harder challenge video. The image filtering method need to be improved.
-- The lane lines should be parallel for most of time, judging statement is preferred to select one better fitting line.
+ - an implementation of better cropping could improve the accuracy of the pipeline or a better noise reduction method
+- The lane detecting algorithm could also include lane lanes that are more curved however this will involve a better way to implement the algorithm.
+- Finally, the lane lines could be parallel for most of time, judging statement is preferred to select one better fitting line. (This however is on the video side and cannot be controlled)
